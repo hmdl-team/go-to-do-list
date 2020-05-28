@@ -6,6 +6,13 @@ import (
 	"to-do-list-service/models"
 )
 
+
+
+
+type taskStore struct {
+	db gorm.DB
+}
+
 func UpdateTest(db *gorm.DB) {
 
 	// ----Tạo mới task------

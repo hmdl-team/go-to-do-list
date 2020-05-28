@@ -17,6 +17,7 @@ type MsSql struct {
 //sql server
 func (u *MsSql) SqlServeConnect() (*gorm.DB, error) {
 	connectionString := fmt.Sprintf("server=%s;user id=%s;password=%s;port=%v;database=%s", u.Host, u.UserName, u.Password, u.Port, u.DbName)
+
 	db, err := gorm.Open("mssql", connectionString)
 	if err != nil {
 		return nil, err
